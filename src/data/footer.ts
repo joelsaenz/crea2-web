@@ -35,8 +35,8 @@ export const quickLinks: QuickLink[] = [
 ]
 
 export const contactItems: ContactItem[] = [
-  { icon: MapPin, text: 'Av. Principal 123, Col. Centro, Ciudad' },
-  { icon: Phone, text: '+52 (123) 456 78 90' },
+  { icon: MapPin, text: 'Meanguera, Morazán, El Salvador' },
+  { icon: Phone, text: '+50370632464' },
   { icon: Mail, text: 'crea2sv@gmail.com' },
   { icon: Clock, text: 'Lun - Vie: 9:00 - 18:00' },
 ]
