@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-900: #0F172A;
+  --color-dark-800: #111827;
+  --color-electric: #2563EB;
+  --color-electric-light: #3B82F6;
+  --color-light: #F5F7FA;
+  --color-white: #FFFFFF;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-dark-800 bg-light antialiased;
+  }
+
+  ::selection {
+    @apply bg-electric/20 text-electric;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-electric px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-electric-light hover:shadow-lg hover:shadow-electric/25 active:scale-[0.97] cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-dark-900 active:scale-[0.97] cursor-pointer;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-dark-900 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-dark-800 hover:shadow-lg active:scale-[0.97] cursor-pointer;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-electric to-electric-light bg-clip-text text-transparent;
+  }
+
+  .card-glass {
+    @apply rounded-2xl border border-white/10 bg-white/80 backdrop-blur-xl shadow-sm transition-all duration-300 hover:shadow-lg;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-dark-900;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-lg text-dark-800/60 max-w-2xl;
+  }
+}

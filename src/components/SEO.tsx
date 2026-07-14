@@ -1,0 +1,30 @@
+import { Helmet } from 'react-helmet-async'
+
+interface SEOProps {
+  title: string
+  description: string
+  url?: string
+}
+
+const SITE_NAME = 'CREA2'
+const BASE_URL = 'https://crea2sv.com'
+
+export default function SEO({ title, description, url }: SEOProps) {
+  const fullTitle = `${title} | ${SITE_NAME}`
+  const fullUrl = url ? `${BASE_URL}${url}` : BASE_URL
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
+  )
+}
